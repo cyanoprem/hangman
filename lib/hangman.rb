@@ -37,7 +37,7 @@ class Game
         puts "You have #{@guesses_left} incorrect guesses left"
         puts "Incorrect guesses: #{@incorrect_guesses}" 
         print 'Guess the letter: '
-        guessed_letter = gets.chomp
+        guessed_letter = gets.chomp.downcase
         change_dash_string(guessed_letter)
       end
     end
