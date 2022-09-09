@@ -6,6 +6,7 @@ class Game
     @secret_word = generate_secret_word
     @dash_string = generate_dash_string
     @guesses_left = 6
+    @incorrect_guesses = []
     puts @secret_word
     puts string_with_spaces(@dash_string) 
   end
@@ -33,7 +34,8 @@ class Game
         puts "Oops! Number of guesses are over. The correct answer is #{@secret_word}"
         return
       else
-        puts "You have #{@guesses_left} guesses left" 
+        puts "You have #{@guesses_left} incorrect guesses left"
+        puts "Incorrect guesses: #{@incorrect_guesses}" 
         print 'Guess the letter: '
         guessed_letter = gets.chomp
         change_dash_string(guessed_letter)
@@ -52,10 +54,11 @@ class Game
           @dash_string[index] = guessed_letter
         end
       end
-      puts string_with_spaces(@dash_string)
+      puts "\nWord: #{string_with_spaces(@dash_string)}"
     else
-      puts string_with_spaces(@dash_string)
+      puts "\nWord: #{string_with_spaces(@dash_string)}"
       @guesses_left -= 1
+      @incorrect_guesses.push(guessed_letter)
     end
   end
 
