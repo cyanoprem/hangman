@@ -1,0 +1,11 @@
+---
+:game_name: test
+:secret_word: graphic
+:dash_string: grap_i_
+:guesses_left: 1
+:incorrect_guesses:
+- t
+- m
+- q
+- e
+- x
