@@ -1,0 +1,7 @@
+---
+:game_name: test2
+:secret_word: barrier
+:dash_string: _arrier
+:guesses_left: 5
+:incorrect_guesses:
+- z
